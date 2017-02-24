@@ -12,8 +12,8 @@ gmaps = googlemaps.Client(key='YOUR_API_KEY')
 # print(result_geometry);
 
 with open('address.csv', 'r', encoding='utf-8') as csvfile:
-    jusoreader = csv.reader(csvfile)
-    for row in jusoreader:
+    addressreader = csv.reader(csvfile)
+    for row in addressreader:
         geocode_result = gmaps.geocode(row);
         try:
             result_geometry = geocode_ressult[0]['geometry']['location'];
